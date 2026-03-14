@@ -48,7 +48,7 @@ function App() {
     const email = client.email || ""
     const emailName = email.split("@")[0]
     const text = [client.name, client.surname, emailName]
-      .filter(Boolean) // entfernt null/undefined/"" automatisch
+      .filter(Boolean) // removes null/undefined/"" 
       .join(' ')
       .toLowerCase()
     return text.includes(query)}
