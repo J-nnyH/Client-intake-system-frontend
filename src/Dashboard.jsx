@@ -39,6 +39,7 @@ function Dashboard({user, setUser}) {
    if(!filter) return true;
    if(filter === 'client') return client.status=== 'client';
    if(filter === 'lead') return (client.status || "").includes('lead');
+   return true; // fallback
  })
 
  const searchedClients = filteredClients.filter((client)=>{
